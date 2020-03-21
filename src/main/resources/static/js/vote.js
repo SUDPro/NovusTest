@@ -1,4 +1,4 @@
-var  firstCat = document.getElementById('firstCat');
+var firstCat = document.getElementById('firstCat');
 var firstCatName = document.getElementById('nameFirst');
 var firstPhoto = document.getElementById('photoFirst');
 var secondCat = document.getElementById('secondCat');
@@ -6,7 +6,7 @@ var secondCatName = document.getElementById('nameSecond');
 var secondPhoto = document.getElementById('photoSecond');
 var arrOfCats;
 
-$( document ).ready(function() {
+$(document).ready(function () {
     loadCats()
 });
 
@@ -21,7 +21,7 @@ function loadCats() {
     });
 }
 
-function showCats(){
+function showCats() {
     if (arrOfCats.length > 0) {
         firstCatName.innerHTML = arrOfCats[0].name;
         secondCatName.innerHTML = arrOfCats[1].name;
@@ -35,7 +35,7 @@ function showCats(){
     }
 }
 
-function deleteCatsFromArray(){
+function deleteCatsFromArray() {
     arrOfCats.splice(0, 2);
 }
 
@@ -56,10 +56,10 @@ function voteForCat(identifier) {
     });
 }
 
-$(firstCat).click(function() {
+$(firstCat).click(function () {
     voteForCat(firstCatName.getAttribute("data-identifier"));
 });
 
-$(secondCat).click(function() {
+$(secondCat).click(function () {
     voteForCat(secondCatName.getAttribute("data-identifier"));
 });

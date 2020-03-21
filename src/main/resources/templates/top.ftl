@@ -10,12 +10,6 @@
 <body>
 <h3>Самые оцениваемые котики</h3>
 <h5><a href="/vote">Оценить ещё</a></h5>
-<#--<ul>-->
-<#--    <#list cats as cat>-->
-<#--        <li>${cat.getName()} - ${cat.getRate()}</li>-->
-<#--    </#list>-->
-<#--</ul>-->
-
 <table class="table table-striped">
     <thead>
     <tr>
@@ -25,16 +19,15 @@
     </thead>
     <tbody>
     <#list cats as cat>
-    <tr>
-        <td>${cat?index + 1}</td>
-        <td>
-            <img width="770" height="430" src="${cat.photoPath}">
-            <h5>${cat.name}</h5>
-        </td>
-    </tr>
+        <tr>
+            <td>${cat?index + 1}</td>
+            <td>
+                <img width="770" height="430" src="${cat.photoPath}">
+                <h5>${cat.name}</h5>
+            </td>
+        </tr>
     </#list>
     </tbody>
 </table>
-</div>
 </body>
 </html>

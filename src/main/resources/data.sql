@@ -22,4 +22,3 @@ INSERT INTO cat (name, photo_path, rate) values
     ('Роман','/images/21.jpg', 0),
     ('Чижик','/images/22.jpg', 0),
     ('Мурзик','/images/23.jpg', 0);
-

@@ -9,8 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class CatController {
 
+    private CatService catService;
+
     @Autowired
-    CatService catService;
+    public CatController(CatService catService) {
+        this.catService = catService;
+    }
 
     @GetMapping("/top")
     public String getCatRatePage(ModelMap modelMap) {

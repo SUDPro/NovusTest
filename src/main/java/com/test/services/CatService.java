@@ -10,8 +10,12 @@ import java.util.List;
 @Service
 public class CatService {
 
+    private CatRepository catRepository;
+
     @Autowired
-    CatRepository catRepository;
+    public CatService(CatRepository catRepository) {
+        this.catRepository = catRepository;
+    }
 
     public List<Cat> getTop10ByRate() {
         return catRepository.getTop10ByRate();
