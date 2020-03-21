@@ -26,8 +26,10 @@ public class CatService {
     }
 
     public void voteForCat(Long id) {
-        Cat cat = catRepository.findById(id).orElseThrow(IllegalArgumentException::new);
-        cat.setRate(cat.getRate() + 1);
-        catRepository.save(cat);
+        synchronized (id.toString().intern()) {
+            Cat cat = catRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+            cat.setRate(cat.getRate() + 1);
+            catRepository.save(cat);
+        }
     }
 }
