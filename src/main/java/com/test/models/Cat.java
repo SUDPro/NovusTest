@@ -24,20 +24,4 @@ public class Cat {
     private String name;
     private Long rate;
     private String photoPath;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Cat cat = (Cat) o;
-        return Objects.equals(id, cat.id) &&
-                Objects.equals(name, cat.name) &&
-                Objects.equals(rate, cat.rate) &&
-                Objects.equals(photoPath, cat.photoPath);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, rate, photoPath);
-    }
 }
